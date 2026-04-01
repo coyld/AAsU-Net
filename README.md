@@ -87,11 +87,3 @@ python scripts/train.py --config configs/kits19_train.yaml --train-manifest data
 
 Please adjust the dataset paths and configuration files according to your local environment before training or testing.
 
-## Citation
-
-If you use this project, please cite the original paper:
-
-**AAsU-Net: Adaptive anisotropic convolutional network for renal neoplasm segmentation**
-
-```
-
