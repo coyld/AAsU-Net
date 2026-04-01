@@ -1,0 +1,25 @@
+project:
+  name: AAsU-Net-KiTS19
+  output_dir: outputs/kits19_aasunet
+  seed: 42
+
+data:
+  num_classes: 3
+  patch_size: [64, 128, 128]
+  target_spacing: [3.22, 1.62, 1.62]
+  intensity_clip: [-75.0, 293.0]
+  foreground_labels: [1, 2]
+  positive_sample_ratio: 0.8
+  cache_in_memory: false
+  num_workers: 4
+  label_map: {}
+
+validation:
+  regions: [kidney, tumor]
+
+train:
+  batch_size: 2
+  epochs: 1000
+  iterations_per_epoch: 250
+  early_stopping_patience: 20
+  output_dir: outputs/kits19_aasunet

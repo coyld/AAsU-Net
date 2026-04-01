@@ -1,0 +1,30 @@
+# Adaptive anisotropic convolution without CSFF
+project:
+  name: model4_aas_no_csff
+  output_dir: outputs/model4_aas_no_csff
+
+data:
+  input_channels: 1
+  num_classes: 3
+  patch_size: [64, 128, 128]
+  target_spacing: [3.22, 1.62, 1.62]
+  intensity_clip: [-75.0, 293.0]
+
+model:
+  encoder_channels: [24, 48, 96, 192, 320, 320]
+  conv_mode: aas
+  use_csff: false
+  deep_supervision: true
+
+optimizer:
+  name: sgd
+  lr: 0.01
+  momentum: 0.99
+  weight_decay: 0.00003
+  poly_power: 0.9
+
+train:
+  batch_size: 2
+  epochs: 1000
+  iterations_per_epoch: 250
+  early_stopping_patience: 20

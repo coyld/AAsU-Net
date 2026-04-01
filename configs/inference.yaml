@@ -1,0 +1,32 @@
+project:
+  name: AAsU-Net-Inference
+  output_dir: outputs/inference
+
+data:
+  input_channels: 1
+  num_classes: 3
+  patch_size: [64, 128, 128]
+  target_spacing: [3.22, 1.62, 1.62]
+  intensity_clip: [-75.0, 293.0]
+  zscore: true
+  num_workers: 0
+
+model:
+  encoder_channels: [24, 48, 96, 192, 320, 320]
+  conv_mode: aas
+  use_csff: true
+  reduction: 4
+  leakiness: 0.01
+  deep_supervision: true
+  dropout: 0.0
+
+validation:
+  batch_size: 1
+  sliding_window_batch: 1
+  overlap: 0.5
+  use_gaussian: true
+  save_predictions: true
+  regions: [kidney, tumor]
+
+runtime:
+  device: cuda
