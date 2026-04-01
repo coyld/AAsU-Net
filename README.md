@@ -2,7 +2,7 @@
 
 AAsU-Net is a 3D medical image segmentation framework for kidney and renal tumor segmentation, based on the paper *AAsU-Net ：Adaptive anisotropic convolutional net-work for renal neoplasm segmentation*.
 
-## 1.Features
+## Features
 
 - Adaptive anisotropic convolution (AAs-conv)
 - 6-stage 3D U-Net backbone
@@ -10,7 +10,7 @@ AAsU-Net is a 3D medical image segmentation framework for kidney and renal tumor
 - Deep supervision
 - Training and inference pipeline for KiTS datasets
 
-## 2.Project Structure
+## Project Structure
 
 ```text
 AAsU-Net/
@@ -22,7 +22,7 @@ AAsU-Net/
 ├─ requirements.txt
 └─ README.md
 
-## 3.Installation
+## Installation
 
 ```text
 git clone <your-repo-url>
@@ -31,7 +31,7 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
-## 4. Data Preparation
+## Data Preparation
 
 ### KiTS19 
 ```text
