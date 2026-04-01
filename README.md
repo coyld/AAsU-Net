@@ -22,17 +22,14 @@ AAsU-Net/
 ├─ requirements.txt
 └─ README.md
 
-## 3. Installation
+## 3.Installation
 
-```bash
+```text
 git clone <your-repo-url>
 cd AAsU-Net
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-```
-
----
 
 ## 4. Data Preparation
 
